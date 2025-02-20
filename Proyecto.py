@@ -58,4 +58,24 @@ class Vehiculo:
 
     def __str__(self):
         return f"Placa: {self.placa}, Marca: {self.marca}, Modelo: {self.modelo}, Año: {self.año}, Kilometraje: {self.kilometraje}"
-            
+
+class FlotaVehiculos:
+    def __init__(self):
+        self.vehiculos = ListaEnlazadaSimple()
+
+    def registrar_vehiculo(self, placa, marca, modelo, año, kilometraje):
+        vehiculo = Vehiculo(placa, marca, modelo, año, kilometraje)
+        self.vehiculos.agregar(vehiculo)
+        print(f"Vehículo con placa {placa} registrado exitosamente.")
+
+    def buscar_vehiculo(self, placa):
+        actual = self.vehiculos.cabeza
+        while actual:
+            if actual.dato.placa == placa:
+                return actual.dato
+            actual = actual.siguiente
+        return None
+
+    def listar_vehiculos(self):
+        print("Lista de vehículos registrados:")
+        self.vehiculos.recorrer()            

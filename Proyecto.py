@@ -78,4 +78,13 @@ class FlotaVehiculos:
 
     def listar_vehiculos(self):
         print("Lista de vehículos registrados:")
-        self.vehiculos.recorrer()            
+        self.vehiculos.recorrer()
+               
+def mostrar_menu():
+    print("\n--- Menú de Gestión de Flota de Vehículos ---")
+    print("1. Registrar un nuevo vehículo")
+    print("2. Agregar mantenimiento a un vehículo")
+    print("3. Consultar historial de mantenimientos de un vehículo")
+    print("4. Calcular costo total de mantenimientos de un vehículo")
+    print("5. Listar todos los vehículos")
+    print("6. Salir")                    

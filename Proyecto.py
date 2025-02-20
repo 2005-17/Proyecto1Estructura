@@ -21,8 +21,7 @@ class ListaEnlazadaSimple:
         actual = self.cabeza
         while actual:
             print(actual.dato)
-            actual = actual.siguiente
-            
+            actual = actual.siguiente          
 class Mantenimiento:
     def __init__(self, fecha, descripcion, costo):
         self.fecha = fecha
